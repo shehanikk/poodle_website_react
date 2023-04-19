@@ -1,9 +1,10 @@
 import './App.css';
-import Login from './pages/login';
+import Register from './pages/register';
+import "./style.scss";
 
 function App() {
   return (
-    <Login></Login>
+    <Register></Register>
   );
 }
 
