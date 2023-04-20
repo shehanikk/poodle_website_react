@@ -1,10 +1,12 @@
 import './App.css';
-import Register from './pages/register';
+import Navibar from './components/Navibar';
+//import Register from './pages/register';
 import "./style.scss";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <Register></Register>
+    <Navibar></Navibar>
   );
 }
 
