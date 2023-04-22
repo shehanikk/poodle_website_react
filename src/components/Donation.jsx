@@ -1,8 +1,9 @@
 import React from "react"
+import donationTop from "../img/don_top.png"
 
 function Donation() {
     return (
-        <h1>Donation</h1>
+        <img src={donationTop} alt="homeimage" className="homeImage"/>
     )
 }
 

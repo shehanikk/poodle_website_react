@@ -7,6 +7,9 @@ import Evaccination from "./Evaccination";
 import Advertisments from "./Advertisment";
 import Donation from "./Donation";
 import Profile from "./profile";
+import AddAds from "../subpages/addAds";
+import UpdateAds from "../subpages/updateAds";
+import DeleteAds from "../subpages/deleteAds";
 
 class Navibar extends Component {
   state = { clicked: false};
@@ -43,6 +46,9 @@ class Navibar extends Component {
            <Route path="/advertisments" element={<Advertisments/>}/>
            <Route path="/donation" element={<Donation/>}/>
            <Route path="/profile" element={<Profile/>}/>
+           <Route path="/addAds" element={<AddAds/>}/>
+           <Route path="/updateAds" element={<UpdateAds/>}/>
+           <Route path="/deleteAds" element={<DeleteAds/>}/>
         </Routes>
         </Router>
         </>
