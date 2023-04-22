@@ -1,8 +1,9 @@
 import React from "react"
+import vaccineTop from "../img/vac_top.png"
 
 function Evaccination() {
     return (
-        <h1>Evaccination</h1>
+        <img src={vaccineTop} alt="homeimage" className="homeImage"/>
     )
 }
 
