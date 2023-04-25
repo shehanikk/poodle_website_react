@@ -41,7 +41,7 @@ function AdvertismentUpdate() {
                 </Form.Group>
                
                 <br/>
-                <Button variant="primary" type="submit">
+                <Button variant="success" type="submit">
                     Update
                 </Button>
             </Form>

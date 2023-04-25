@@ -31,7 +31,7 @@ function AddDon() {
                 <Form.Control type="file" />
                 </Form.Group>
                 <br/>
-                <Button variant="primary" type="submit">
+                <Button variant="success" type="submit">
                     Submit
                 </Button>
             </Form>

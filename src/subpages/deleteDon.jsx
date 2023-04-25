@@ -21,7 +21,7 @@ function DeleteDon() {
                 <ListGroup.Item>Description :</ListGroup.Item>
                 </ListGroup>
                 <Card.Body>
-                <Button variant="primary">Delete</Button>
+                <Button variant="success">Delete</Button>
                 </Card.Body>
             </Card>
             </li>
