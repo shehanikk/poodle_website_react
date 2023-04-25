@@ -10,6 +10,11 @@ import Profile from "./profile";
 import AddAds from "../subpages/addAds";
 import UpdateAds from "../subpages/updateAds";
 import DeleteAds from "../subpages/deleteAds";
+import AddDon from "../subpages/addDon";
+import UpdateDon from "../subpages/updateDon";
+import DeleteDon from "../subpages/deleteDon";
+import DonationUpdate from "../subpages/donUp";
+import AdvertismentUpdate from "../subpages/addUp";
 
 class Navibar extends Component {
   state = { clicked: false};
@@ -49,6 +54,11 @@ class Navibar extends Component {
            <Route path="/addAds" element={<AddAds/>}/>
            <Route path="/updateAds" element={<UpdateAds/>}/>
            <Route path="/deleteAds" element={<DeleteAds/>}/>
+           <Route path="/addDon" element={<AddDon/>}/>
+           <Route path="/updateDon" element={<UpdateDon/>}/>
+           <Route path="/deleteDon" element={<DeleteDon/>}/>
+           <Route path="/donationUpdate" element={<DonationUpdate/>}/>
+           <Route path="/advertismentUpdate" element={<AdvertismentUpdate/>}/>
         </Routes>
         </Router>
         </>
