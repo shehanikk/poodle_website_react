@@ -1,0 +1,23 @@
+form{
+    padding-left: 30%;
+    padding-top: 2%;
+    padding-right: 30%;
+    padding-bottom: 3%;
+}
+
+h3{
+    text-align: center;
+    padding-top: 2%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+
+}
+
+ul.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-top: 50px;
+    padding-left: 30px;
+  }
