@@ -24,7 +24,7 @@ function DeleteAds() {
                 <ListGroup.Item>Type :</ListGroup.Item>
                 </ListGroup>
                 <Card.Body>
-                <Button variant="primary">Delete</Button>
+                <Button variant="success">Delete</Button>
                 </Card.Body>
             </Card>
             </li>

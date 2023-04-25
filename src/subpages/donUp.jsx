@@ -23,7 +23,7 @@ function DonationUpdate() {
                 <Form.Control as="textarea" rows={3} />
                 </Form.Group>
                 <br/>
-                <Button variant="primary" type="submit">
+                <Button variant="success" type="submit">
                     Update
                 </Button>
             </Form>

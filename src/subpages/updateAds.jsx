@@ -26,7 +26,7 @@ function UpdateAds() {
                 </ListGroup>
                 <Card.Body>
                 <Link as={Link} to={"/advertismentUpdate"}>
-                <Button variant="primary">Update</Button>
+                <Button variant="success">Update</Button>
                 </Link>
                 </Card.Body>
             </Card>

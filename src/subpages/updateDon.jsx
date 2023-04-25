@@ -23,7 +23,7 @@ function UpdateDon() {
                 </ListGroup>
                 <Card.Body>
                 <Link as={Link} to={"/donationUpdate"}>
-                <Button variant="primary">Update</Button>
+                <Button variant="success">Update</Button>
                 </Link>
                 </Card.Body>
             </Card>
