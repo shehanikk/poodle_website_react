@@ -5,12 +5,14 @@ import upads from "../img/up_ads.png"
 import delads from "../img/del_ads.png"
 import "./addStyle.css"
 import {Link} from "react-router-dom"
+import Navibar from "./Navibar"
 
 
 function Advertisments() {
     return (
         
         <div>
+            <Navibar></Navibar>
              <img src={addTop} alt="homeimage" className="homeImage"/>
              <table>
                 <td>

@@ -3,10 +3,12 @@ import "./addAdsStyle.css"
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
+import Navibar from "../components/Navibar";
 
 function DeleteDon() {
     return (
         <diV>
+            <Navibar></Navibar>
             <h3>
                 DELETE DONATION 
             </h3>

@@ -5,10 +5,12 @@ import updon from "../img/up_don.png"
 import deldon from "../img/del_don.png"
 import "./addStyle.css"
 import { Link } from "react-router-dom"
+import Navibar from "./Navibar"
 
 function Donation() {
     return (
         <div>
+            <Navibar></Navibar>
             <img src={donationTop} alt="homeimage" className="homeImage"/>
 
             <table>

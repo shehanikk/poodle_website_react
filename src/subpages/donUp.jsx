@@ -2,11 +2,13 @@ import React from "react"
 import "./addAdsStyle.css"
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Navibar from "../components/Navibar";
 
 
 function DonationUpdate() {
     return (
         <div>
+            <Navibar></Navibar>
         <h3>Donation update</h3>
 
         <Form>
