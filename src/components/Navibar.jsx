@@ -1,30 +1,21 @@
 import logo from "../img/poodle_logo2.png"
 import "./NavibarStyle.css";
-import { BrowserRouter as Router, Route, Routes,Link} from 'react-router-dom'
-import Home from './home';
+import { Link} from 'react-router-dom'
 import { Component } from "react";
-import Evaccination from "./Evaccination";
-import Advertisments from "./Advertisment";
-import Donation from "./Donation";
-import Profile from "./profile";
-import AddAds from "../subpages/addAds";
-import UpdateAds from "../subpages/updateAds";
-import DeleteAds from "../subpages/deleteAds";
-import AddDon from "../subpages/addDon";
-import UpdateDon from "../subpages/updateDon";
-import DeleteDon from "../subpages/deleteDon";
-import DonationUpdate from "../subpages/donUp";
-import AdvertismentUpdate from "../subpages/addUp";
+
+
 
 class Navibar extends Component {
+  
   state = { clicked: false};
   handleClick = () => {
     this.setState({clicked: !this.state.clicked})
   }
   render(){
     return(
+      
         <>
-        <Router>
+        
         <nav>
             <Link as={Link} to={"/"}>
             <img src={logo} alt="Poodle" 
@@ -45,22 +36,7 @@ class Navibar extends Component {
               <i id="bar" className={this.state.clicked ? "fas fa-times": "fas fa-bars"}></i> 
             </div>
         </nav>
-        <Routes>
-           <Route path="/" element={<Home/>}/>
-           <Route path="/evaccination" element={<Evaccination/>}/>
-           <Route path="/advertisments" element={<Advertisments/>}/>
-           <Route path="/donation" element={<Donation/>}/>
-           <Route path="/profile" element={<Profile/>}/>
-           <Route path="/addAds" element={<AddAds/>}/>
-           <Route path="/updateAds" element={<UpdateAds/>}/>
-           <Route path="/deleteAds" element={<DeleteAds/>}/>
-           <Route path="/addDon" element={<AddDon/>}/>
-           <Route path="/updateDon" element={<UpdateDon/>}/>
-           <Route path="/deleteDon" element={<DeleteDon/>}/>
-           <Route path="/donationUpdate" element={<DonationUpdate/>}/>
-           <Route path="/advertismentUpdate" element={<AdvertismentUpdate/>}/>
-        </Routes>
-        </Router>
+        
         </>
     );
 }

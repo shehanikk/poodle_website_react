@@ -4,10 +4,12 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
+import Navibar from "../components/Navibar";
 
 function UpdateAds() {
     return (
         <diV>
+            <Navibar></Navibar>
              <h3>
                 CURRENT ADVERTISMENTS 
             </h3>

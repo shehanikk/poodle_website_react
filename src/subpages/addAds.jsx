@@ -2,10 +2,13 @@ import React from "react"
 import Form from 'react-bootstrap/Form';
 import "./addAdsStyle.css"
 import Button from 'react-bootstrap/Button';
+import Navibar from "../components/Navibar";
+
 
 function AddAds() {
     return (
         <div>
+            <Navibar></Navibar>
             <h3>
             ADD ADVERTISMENTS 
             </h3>
