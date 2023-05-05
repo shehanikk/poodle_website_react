@@ -1,37 +1,56 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./addAdsStyle.css"
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Button from 'react-bootstrap/Button';
 import Navibar from "../components/Navibar";
+import { collection, deleteDoc, doc, onSnapshot } from "firebase/firestore";
+import { db } from "../firebase";
+import { toast } from "react-toastify";
+import AdsDelCard from "../cardPages/adsDelCard";
 
-function DeleteAds() {
+const DeleteAds = () => {
+    const [addvertisments, setAddvertisments] = useState([]);
+
+    useEffect(() => {
+        const unsub = onSnapshot(
+            collection(db, "addvertisments"),
+            (snapshot) => {
+                let list = [];
+                snapshot.docs.forEach((doc) => {
+                    list.push({id: doc.id, ...doc.data()})
+                });
+
+                setAddvertisments(list);
+            }, (error) => {
+                console.log(error);
+            }
+        );
+        return() => {
+            unsub();
+        };
+    }, []);
+
+    const handleDelete = async (id) => {
+        if (window.confirm("Are you sure wanted to delete this addvertisment ?")) {
+          try {
+            //setLoading(true);
+            await deleteDoc(doc(db, "addvertisments", id));
+            //setLoading(false);
+            toast.success("addvertisments deleted successfully");
+          } catch (err) {
+            console.log(err);
+          }
+        }
+    }
+
+    console.log("addvertisments", addvertisments);
+
     return (
         <diV>
             <Navibar></Navibar>
              <h3>
                 DELETE ADVERTISMENTS 
             </h3>
-
-           <ul className="cont">
-            <li>
-            <Card style={{ width: '18rem',}}>
-                <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-                <ListGroup className="list-group-flush">
-                <ListGroup.Item>Name :</ListGroup.Item>
-                <ListGroup.Item>Description :</ListGroup.Item>
-                <ListGroup.Item>Price :</ListGroup.Item>
-                <ListGroup.Item>Location :</ListGroup.Item>
-                <ListGroup.Item>Mobile Number :</ListGroup.Item>
-                <ListGroup.Item>Type :</ListGroup.Item>
-                </ListGroup>
-                <Card.Body>
-                <Button variant="success">Delete</Button>
-                </Card.Body>
-            </Card>
-            </li>
-           </ul>
            
+           <AdsDelCard addvertisments={addvertisments} handleDelete={handleDelete}/>
 
         </diV>
     )

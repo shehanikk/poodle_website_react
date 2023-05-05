@@ -20,14 +20,19 @@ import DonationUpdate from "./subpages/donUp";
 import AdvertismentUpdate from "./subpages/addUp";
 import Home from './components/home';
 import Register from './pages/register';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "./context/AuthContext";
+import DonCard from './cardPages/donCard';
+import 'react-toastify/dist/ReactToastify.css';
+import AdsCard from './cardPages/adsCard';
 
 
 function App() {
 
   const { currentUser } = useContext(AuthContext);
-  
+  const {setActive} = useState("updateDon");
+  const {setAdsActive} = useState("updateAds")
+
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
       return <Navigate to="/login" />;
@@ -51,16 +56,20 @@ function App() {
            <Route path="/advertisments" element={<Advertisments/>}/>
            <Route path="/donation" element={<Donation/>}/>
            <Route path="/profile" element={<Profile/>}/>
-           <Route path="/addAds" element={<AddAds/>}/>
+           <Route path="/addAds" element={<AddAds currentUser={currentUser}/>}/>
+           <Route path="/addAds/:id" element={<AddAds currentUser={currentUser} setActive={setAdsActive}/>}/>
            <Route path="/updateAds" element={<UpdateAds/>}/>
            <Route path="/deleteAds" element={<DeleteAds/>}/>
-           <Route path="/addDon" element={<AddDon/>}/>
+           <Route path="/addDon" element={ <AddDon currentUser={currentUser}/>}/>
+           <Route path="/addDon/:id" element={ <AddDon currentUser={currentUser} setActive={setActive}/>}/>
            <Route path="/updateDon" element={<UpdateDon/>}/>
            <Route path="/deleteDon" element={<DeleteDon/>}/>
            <Route path="/donationUpdate" element={<DonationUpdate/>}/>
            <Route path="/advertismentUpdate" element={<AdvertismentUpdate/>}/>
            <Route path="/login" element={<Login/>}/>
            <Route path="/register" element={<Register/>}/>
+           <Route path="/donCard" element={<DonCard/>}/>
+           <Route path="/adsCard" element={<AdsCard/>}/>
       </Route>
       
     </Routes>
