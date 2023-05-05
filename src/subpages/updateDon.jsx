@@ -1,36 +1,49 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import "./addAdsStyle.css"
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Button from 'react-bootstrap/Button';
-import { Link } from "react-router-dom";
+//import Card from 'react-bootstrap/Card';
+//import ListGroup from 'react-bootstrap/ListGroup';
+//import Button from 'react-bootstrap/Button';
+//import { Link } from "react-router-dom";
 import Navibar from "../components/Navibar";
+import { collection, onSnapshot } from "firebase/firestore";
+import { db } from "../firebase";
+import DonCard from "../cardPages/donCard";
+//import DonCard from "../cardPages/donCard";
 
-function UpdateDon() {
+const UpdateDon = ( ) => {
+    //const [loading, setLoading] = useState(true);
+    const [donations, setDonations] = useState([]);
+
+    useEffect(() => {
+        const unsub = onSnapshot(
+            collection(db, "donations"),
+            (snapshot) => {
+                let list = [];
+                snapshot.docs.forEach((doc) => {
+                    list.push({id: doc.id, ...doc.data()})
+                });
+
+                setDonations(list);
+            }, (error) => {
+                console.log(error);
+            }
+        );
+        return() => {
+            unsub();
+        };
+    }, []);
+
+    console.log("donations", donations);
+
     return (
         <diV>
             <Navibar></Navibar>
              <h3>
                 CURRENT DONATIONS 
             </h3>
-
-            <ul className="cont">
-            <li>
-            <Card style={{ width: '18rem',}}>
-                <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-                <ListGroup className="list-group-flush">
-                <ListGroup.Item>Name :</ListGroup.Item>
-                <ListGroup.Item>Health Issue :</ListGroup.Item>
-                <ListGroup.Item>Description :</ListGroup.Item>
-                </ListGroup>
-                <Card.Body>
-                <Link as={Link} to={"/donationUpdate"}>
-                <Button variant="success">Update</Button>
-                </Link>
-                </Card.Body>
-            </Card>
-            </li>
-           </ul>
+            
+            <DonCard donations={donations}/>
+           
         </diV>
     )
 }
