@@ -7,11 +7,25 @@ import Navibar from "./Navibar";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from 'react-router-dom';
 
 
 function Profile() {
-
   const {currentUser} = useContext(AuthContext)
+  const navigate = useNavigate();
+  if (!currentUser) {
+    return <div>Loading...</div>; // or render a loading state
+  }
+
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        navigate('/login');
+      })
+      .catch((error) => {
+        console.log('Logout error:', error);
+      });
+  };
 
     return (
         <div>
@@ -35,13 +49,13 @@ function Profile() {
                 </table>
                 <br/>
                 <div className="d-grid gap-2">
-                    <Button variant="success" size="sm" onClick={() =>signOut(auth)}>
+                    <Button variant="success" size="sm" onClick={handleLogout}>
                          Logout
                     </Button>
                 </div> 
             </div> 
             <footer>
-                <p>POODLE For The Dogs</p>
+                <p>POODLE FOR PET LOVERS</p>
             </footer>
         </div>
        

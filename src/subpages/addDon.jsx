@@ -154,7 +154,7 @@ const AddDon = ({currentUser, setActive}) =>{
             </Form>
 
             <footer>
-                <p>POODLE For The Dogs</p>
+                <p>POODLE FOR PET LOVERS</p>
             </footer>
         </diV>
     )

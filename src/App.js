@@ -25,6 +25,10 @@ import { AuthContext } from "./context/AuthContext";
 import DonCard from './cardPages/donCard';
 import 'react-toastify/dist/ReactToastify.css';
 import AdsCard from './cardPages/adsCard';
+import DogsDetailShow from './dogsPages/dogsDetailsShow';
+import SelectedDog from './dogsPages/selectedDog';
+import ChooseCardType from './dogsPages/chooseCardType';
+import ShowVacCard from './dogsPages/showVacCard';
 
 
 function App() {
@@ -70,6 +74,10 @@ function App() {
            <Route path="/register" element={<Register/>}/>
            <Route path="/donCard" element={<DonCard/>}/>
            <Route path="/adsCard" element={<AdsCard/>}/>
+           <Route path="/dogsDetailsShow" element={<DogsDetailShow/>}/>
+           <Route path="/selectedDog" element={<SelectedDog/>}/>
+           <Route path="/chooseCardType" element={<ChooseCardType/>}/>
+           <Route path="/showVacCard" element={<ShowVacCard/>}/>
       </Route>
       
     </Routes>

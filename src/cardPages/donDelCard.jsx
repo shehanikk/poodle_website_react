@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 const DonDelCard = ({donations, user, handleDelete}) => {
     return (
         <diV>
-
+             <div style={{display: "flex",flexWrap:"wrap",gap:10}}>
             {donations?.map((item) => (
                 <div key={item.id}>
                  <ul className="cont">
@@ -31,7 +31,7 @@ const DonDelCard = ({donations, user, handleDelete}) => {
                 </ul>
                 </div>
             ))}
-           
+           </div>
         </diV>
     )
 }

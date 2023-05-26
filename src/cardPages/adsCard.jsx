@@ -10,6 +10,8 @@ const AdsCard = ({addvertisments, user}) => {
 
         <diV>
 
+            <div style={{display: "flex",flexWrap:"wrap",gap:10}}>      
+
             {addvertisments?.map((item) => (
                 <div key={item.id}>
                  <ul className="cont">
@@ -35,6 +37,7 @@ const AdsCard = ({addvertisments, user}) => {
                 </div>
             ))}
            
+           </div>
         </diV>
 
     )
