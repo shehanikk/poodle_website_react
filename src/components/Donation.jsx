@@ -34,7 +34,7 @@ function Donation() {
              </table>
 
              <footer>
-                <p>POODLE For The Dogs</p>
+                <p>POODLE FOR PET LOVERS</p>
             </footer>
         </div>
     )

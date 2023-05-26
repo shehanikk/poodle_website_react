@@ -8,7 +8,9 @@ const AdsDelCard = ({addvertisments, user, handleDelete}) => {
     return (
 
         <diV>
+             <div style={{display: "flex",flexWrap:"wrap",gap:10}}>
 
+             
             {addvertisments?.map((item) => (
                 <div key={item.id}>
                  <ul className="cont">
@@ -34,6 +36,7 @@ const AdsDelCard = ({addvertisments, user, handleDelete}) => {
                 </div>
             ))}
            
+           </div>
         </diV>
 
     )

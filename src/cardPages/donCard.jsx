@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 const DonCard = ({donations, user}) => {
     return (
         <diV>
+             <div style={{display: "flex",flexWrap:"wrap",gap:10}}>
 
             {donations?.map((item) => (
                 <div key={item.id}>
@@ -34,7 +35,7 @@ const DonCard = ({donations, user}) => {
                 </ul>
                 </div>
             ))}
-           
+           </div>
         </diV>
     )
 }

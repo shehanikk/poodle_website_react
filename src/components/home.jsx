@@ -20,9 +20,10 @@ function Home() {
                     <td><img  src={addImg} alt=""/></td>
                     <td>
                     <h2>E-VACCINATION CARD</h2>
-                    <p className="textone">The dog is a domesticated descendant of the wolf.
-                        Also called the domestic dog, it is derived from the extinct Pleistocene wolf, 
-                        and the modern wolf is the dog's nearest living relative.
+                    <p className="textone">
+                    E-vaccination for dogs revolutionizes the way we protect our beloved four-legged companions. 
+                    With a seamless blend of technology and veterinary care, 
+                    it ensures convenience and accuracy in maintaining their health and well-being.
                     </p>
                     <div className="container">
                         <ul className="myUL">
@@ -39,9 +40,10 @@ function Home() {
                 <tr>
                     <td>
                     <h2>STRAY DOG DONATION</h2>
-                        <p className="texttwo">The dog is a domesticated descendant of the wolf. 
-                            Also called the domestic dog, it is derived from the extinct Pleistocene wolf, 
-                            and the modern wolf is the dog's nearest living relative.
+                        <p className="texttwo">
+                        The stray dog donation system embodies a compassionate approach towards the well-being of our furry friends. 
+                        Seamlessly combining generosity and efficient support, 
+                        it paves the way for a brighter future, where every stray dog finds care, comfort, and a loving home
                         </p>
                         <div className="container">
                             <ul className="myUL">
@@ -67,9 +69,9 @@ function Home() {
 
                     <td>
                     <h2>ADD  ADVERTISEMENTS</h2>
-                    <p className="textone">The dog is a domesticated descendant of the wolf. 
-                        Also called the domestic dog, it is derived from the extinct Pleistocene wolf, 
-                        and the modern wolf is the dog's nearest living relative. 
+                    <p className="textone">The dog advertisement system is a powerful platform that connects
+                     canine enthusiasts with their perfect furry companions. With its user-friendly interface and extensive reach, 
+                    it opens doors to endless possibilities, enabling the joyful union of dogs and their forever families.
                     </p>
                     <div className="container">
                         <ul className="myUL">
@@ -87,7 +89,7 @@ function Home() {
             
 
             <footer>
-                <p>POODLE For The Dogs</p>
+                <p>POODLE FOR PET LOVERS</p>
             </footer>
             
 
