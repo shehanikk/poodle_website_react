@@ -4,7 +4,8 @@ import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase";
 import { useLocation } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
-
+import { Image } from "react-bootstrap";
+import "./showVacCard.css"
 
 const ShowVacCard = () => {
     const location = useLocation();
@@ -67,15 +68,19 @@ const ShowVacCard = () => {
 <Table striped bordered hover>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Description</th>
+            <th>Date of vaccination</th>
+            <th>Doctor name</th>
+            <th>Next vaccination due on</th>
+            <th>Vaccines used</th>
           </tr>
         </thead>
         <tbody>
           {Vaccine?.map((item) => (
             <tr key={item.id}>
               <td>{item.Date}</td>
+              <td>{item.DocName}</td>
               <td>{item.DueDate}</td>
+              <td><Image src={item.imgUrl} className="vac-image"></Image></td>
             </tr>
           ))}
         </tbody>
