@@ -56,7 +56,7 @@ const Evaccination = () => {
             <div className='searcbar'>
         <Container className="mt-5">
         <p>
-            Search by the pet owners email address
+            Search by the pet owners username
            </p>
           <Row>
             <Col sm={30}>
